@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-dark navbar-static-top bg-dark">
+  <a class="navbar-brand" href="#">Master of Puppets</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <!-- Persistent buttons -->
+    <ul class="navbar-nav mr-auto">
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a class="nav-link" [routerLink]="['/documentation']">Documentation</a>
+      </li>
+    </ul>
+
+    <!-- A navbar layout with individual configurations for logged in or not is a much better approach here, but it had to be quick this time. -->
+    <!-- Guarded buttons -->
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a class="nav-link" [routerLink]="['/register']">Register</a>
+      </li>
+      <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+      <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
+      </li>
+      <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a class="nav-link" [routerLink]="['/profile']">Profile</a>
+      </li>
+      <li *ngIf="authService.loggedIn()" class="nav-item">
+        <a class="nav-link" (click)="onLogoutClicked()" href="#">Log out</a>
+      </li>
+    </ul>
+  </div>
+</nav>

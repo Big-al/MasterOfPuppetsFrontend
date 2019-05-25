@@ -1,0 +1,42 @@
+<body class="bg-light">
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>Registration</h2>
+  </div>
+
+  <div class="col-md-12">
+    <h4 class="mb-3">Billing address</h4>
+    <form [formGroup]="RegisterOptions" (submit)="onRegisterSubmit()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="firstName">Full name</label>
+          <input type="text" class="form-control" id="firstName" formControlName="Name" placeholder="Firstname Lastname">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>Email</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input type="text" class="form-control" id="username" formControlName="Email" placeholder="You@domain.com">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="username">Password</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">#</span>
+          </div>
+          <input type="password" class="form-control" id="password" formControlName="Password" placeholder="Password">
+        </div>
+      </div>
+
+      <hr class="mb-4">
+      <button class="btn btn-primary btn-lg" style="width: 33%; margin-bottom: 25px" type="submit">Register</button>
+    </form>
+  </div>
+</div>
+</body>
