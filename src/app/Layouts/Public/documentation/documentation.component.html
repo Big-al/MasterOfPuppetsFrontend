@@ -1,3 +1,21 @@
 <h3>Documentation</h3>
 <p> Documentation is available in the form of a Postman integration pack</p>
 <a download="Master_Of_Puppets.postman_collection.json" target="_blank" href="/assets/Master_Of_Puppets.postman_collection.json">Download Integration pack</a>
+
+<br>
+<br>
+
+<h3>Background:</h3>
+<p>
+A FeatureToggle Object consists of the following values:
+</p>
+
+<p>{{ '{' }}</p>
+<p>secretKey: {{ '{' }} type: String, required: true, unique: true},</p>
+<p>toggles: {{ '{' }}  type: [ {{ '{' }} id: String, state: Boolean} ], required: true }</p>
+<p>}</p>
+
+
+<p>secretKey: Your unique identifier. This identifies a featuretoggle, and allows you to target a specific FeatureToggle for operations such as CRUD. </p>
+<p>toggles[]: An array of individual toggles belonging to the specified secretKey. Each toggle simply consists of an identifier and a boolean belonging to said identifier.</p>
+
