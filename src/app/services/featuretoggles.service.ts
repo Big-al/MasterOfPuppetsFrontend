@@ -27,9 +27,10 @@ export class FeaturetogglesService {
   // create new feature toggle on user
   createNew(loginInformation: Credentials) {
     const createNewObject = {
-      email: loginInformation.email,
-      password: loginInformation.password
+      email: loginInformation.email.toString(),
+      password: loginInformation.password.toString()
     };
+
     return this.http.post<CreateNewFeatureToggleStatus>(environment.connectionString + 'featuretoggles/createNew', createNewObject, this.Headers);
   }
 
@@ -64,7 +65,7 @@ interface GetStatusOneFeatureToggleStatus {
   secretKey: string;
 }
 
-interface CreateNewFeatureToggleStatus {
+export interface CreateNewFeatureToggleStatus {
   success: boolean;
   msg: string;
   secretKey: string;

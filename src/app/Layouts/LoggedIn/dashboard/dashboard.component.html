@@ -1,5 +1,7 @@
 <div *ngIf="FeatureTogglesData">
+  <br>
   <h4> Feature toggles:</h4>
+  <br>
   <form [formGroup]="EditFeatureToggleOptions" (submit)="onFeatureToggleChangedSubmit()">
     <ul *ngFor="let ft of FeatureTogglesData" class="list-group">
       <li class="list-group-item">
@@ -11,10 +13,11 @@
         <br>
         <button type="button" class="btn btn-danger" (click)="DeleteOne(ft.secretKey)">Delete</button>
       </li>
+      <br>
     </ul>
     <br>
     <div class="row">
-      <input type="password" class="col-md-8 form-control" placeholder="Type your Password to verify edits" style="margin-right: 10px">
+      <input type="password" formControlName="Password" class="col-md-8 form-control" placeholder="Type your Password to verify edits" style="margin-right: 10px">
       <button type="button" class="btn btn-primary" (click)="CreateNew()">Create new</button>
     </div>
   </form>
