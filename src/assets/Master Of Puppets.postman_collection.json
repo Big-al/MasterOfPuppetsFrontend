@@ -25,12 +25,10 @@
 							"raw": "{\n    \"email\": \"jdoe@gmail.com\",\n    \"password\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/featuretoggles/getStatusAll",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/featuretoggles/getStatusAll",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"featuretoggles",
 								"getStatusAll"
@@ -57,12 +55,10 @@
 							"raw": "{\n    \"email\": \"jdoe@gmail.com\",\n    \"password\": \"123456\",\n    \"secretKey\": \"39b100b4-9fda-4b3a-89ad-40ec1aba0562\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/featuretoggles/getStatusOne",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/featuretoggles/getStatusOne",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"featuretoggles",
 								"getStatusOne"
@@ -89,12 +85,10 @@
 							"raw": "{\n    \"email\": \"jdoe@gmail.com\",\n    \"password\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/featuretoggles/createNew",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/featuretoggles/createNew",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"featuretoggles",
 								"createNew"
@@ -121,12 +115,10 @@
 							"raw": "{\n    \"email\": \"jdoe@gmail.com\",\n    \"password\": \"123456\",\n    \"secretKey\": \"39b100b4-9fda-4b3a-89ad-40ec1aba0562\",\n    \"toggles\": [\n        {\n            \"id\": \"TEST\",\n            \"state\": false\n        },\n        {\n            \"id\": \"TEST2\",\n            \"state\": true\n        }\n    ]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/featuretoggles/updateOne",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/featuretoggles/updateOne",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"featuretoggles",
 								"updateOne"
@@ -153,12 +145,10 @@
 							"raw": "{\n    \"email\": \"jdoe@gmail.com\",\n    \"password\": \"123456\",\n    \"secretKey\": \"6050884b-7e68-41d2-a420-61f74cdb72ee\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/featuretoggles/deleteOne",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/featuretoggles/deleteOne",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"featuretoggles",
 								"deleteOne"
@@ -188,12 +178,10 @@
 							"raw": "{\n\t\"email\": \"jdoe@gmail.com\",\n\t\"password\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/users/authenticate",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/users/authenticate",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"users",
 								"authenticate"
@@ -218,12 +206,10 @@
 							"raw": "{\n    \"name\": \"John doe\",\n    \"email\": \"jdoe@gmail.com\",\n    \"pwHash\": \"123456\",\n    \"featureToggles\": [{\n        \"secretKey\": \"ec7sc9scc1-36d3-405c-8fcd-47d0e897c923\",\n        \"toggles\": [\n            {\n                \"id\": \"TEST\",\n                \"state\": true\n            },\n            {\n                \"id\": \"TEST2\",\n                \"state\": false\n            }\n        ]\n    }]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/users/register",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/users/register",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"users",
 								"register"
@@ -244,12 +230,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5000/users/profile/",
-							"protocol": "http",
+							"raw": "{{LiveEndpoint}}/users/profile/",
 							"host": [
-								"localhost"
+								"{{LiveEndpoint}}"
 							],
-							"port": "5000",
 							"path": [
 								"users",
 								"profile",
@@ -267,12 +251,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/asdasdasdsa/asd",
-					"protocol": "http",
+					"raw": "{{LiveEndpoint}}/asdasdasdsa/asd",
 					"host": [
-						"localhost"
+						"{{LiveEndpoint}}"
 					],
-					"port": "5000",
 					"path": [
 						"asdasdasdsa",
 						"asd"
@@ -303,6 +285,20 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "c49555e9-7d32-4c61-b664-41828900898a",
+			"key": "LiveEndpoint",
+			"value": "https://masterofpuppets.herokuapp.com",
+			"type": "string"
+		},
+		{
+			"id": "abc290c9-a631-4dc0-bc45-533c9b261b74",
+			"key": "DevEndpoint",
+			"value": "http://localhost:5000",
+			"type": "string"
 		}
 	]
 }

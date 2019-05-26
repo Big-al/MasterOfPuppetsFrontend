@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  connectionString: 'http://localhost:5000/'
+  connectionString: 'https://masterofpuppets.herokuapp.com/'
 };
